@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KWARTIR RANTING CIKALONGKULON - GERAKAN PRAMUKA</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pramuka: {
+                            dark: '#3E2723',   /* Cokelat Tua */
+                            light: '#D7CCC8',  /* Cokelat Muda */
+                            gold: '#FFD700',   /* Emas */
+                            purple: '#4A148C', /* Ungu Accent */
+                            red: '#B71C1C'     /* Merah Pandu */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .dropdown:hover .dropdown-menu { display: block; }
+        .slide-fade { transition: opacity 1s ease-in-out; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- TOP BAR -->
+    <div class="bg-pramuka-dark text-white py-2 px-4 text-xs md:text-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span><i class="fas font-semibold text-pramuka-gold mr-1"></i> Satyaku Kudarmakan, Darmaku Kubaktikan</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <a href="https://www.youtube.com/@KwarranCikalongkulon/videos" target="_blank" class="hover:text-pramuka-gold"><i class="fab font-xl fa-youtube"></i></a>
+                <a href="#" class="hover:text-pramuka-gold"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-pramuka-gold"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- LOGO & TITLE -->
+            <div class="flex items-center space-x-3">
+                <img src="https://lh3.googleusercontent.com/d/1g5unYqIUjLhxRQUkFJ3d25j1vf68ZaX7" alt="Logo Kwarran Cikalongkulon" class="h-14 md:h-16 w-auto object-contain">
+                <div>
+                    <h1 class="text-lg md:text-xl font-bold text-pramuka-dark leading-tight">GERAKAN PRAMUKA</h1>
+                    <p class="text-xs md:text-sm font-semibold text-pramuka-purple">KWARTIR RANTING CIKALONGKULON</p>
+                    <p class="text-[10px] text-gray-500">Kwarcab Cianjur - Kwarda Jawa Barat</p>
+                </div>
+            </div>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button id="menu-btn" class="md:hidden text-2xl text-pramuka-dark focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- NAVIGATION MENU -->
+        <nav class="bg-pramuka-dark text-white shadow-inner hidden md:block">
+            <div class="container mx-auto px-4 flex flex-wrap">
+                <a href="#home" class="py-3 px-4 hover:bg-pramuka-purple font-medium text-sm transition"><i class="fas fa-home mr-1"></i> Beranda</a>
+
+                <!-- PROFIL -->
+                <div class="relative dropdown">
+                    <button class="py-3 px-4 hover:bg-pramuka-purple font-medium text-sm flex items-center">Profil <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                    <div class="dropdown-menu absolute hidden bg-white text-gray-800 shadow-lg rounded-b w-56 z-50">
+                        <a href="#sambutan" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Sambutan Ketua</a>
+                        <a href="#visi-misi" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Visi & Misi</a>
+                        <a href="#sejarah" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Sejarah Singkat</a>
+                        <a href="#program-kerja" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Program Kerja</a>
+                        <a href="#potensi" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Data Potensi</a>
+                        <a href="#prestasi" class="block px-4 py-2 hover:bg-pramuka-light text-sm">Data Prestasi</a>
+                    </div>
+                </div>
+
+                <!-- ORGANISASI -->
+                <div class="relative dropdown">
+                    <button class="py-3 px-4 hover:bg-pramuka-purple font-medium text-sm flex items-center">Organisasi <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                    <div class="dropdown-menu absolute hidden bg-white text-gray-800 shadow-lg rounded-b w-60 z-50">
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Struktur Organisasi</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Majelis Pembimbing</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Pengurus/Pimpinan</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Binamuda</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Bidang Orgakum</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Binawasa</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Bidang Keusarpras</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Bidang Humabdimas</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Dewan Kerja Ranting</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">LPK</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Dewan Kehormatan</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Satuan Karya</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-pramuka-light text-sm">Satuan Komunitas</a>
+                    </div>
+                </div>
+
+                <!-- KEGIATAN -->
+                <div class="relative dropdown">
+                    <button class="py-3 px-4 hover:bg-pramuka-purple font-medium text-sm flex items-center">Kegiatan <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                    <div class="dropdown-menu absolute hidden bg-white text-gray-800 shadow-lg rounded-b w-56 z-50">
+                        <a href="https://drive.google.com/drive/folders/1-ExeuBWTtkqxTh4wfLSQ3JsJXWmNDyHj?usp=drive_link" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Kegiatan Kwartir</a>
+                        <a href="https://drive.google.com/drive/folders/1it25U0R3EB1-TI0HPByirBvsL5bifQsI?usp=drive_link" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Kegiatan Partisipasi</a>
+                        <a href="https://drive.google.com/drive/folders/1jra49OPt8DG0_Au4xBK_Ehm9NsOs2yGL?usp=drive_link" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm">Karya Bhakti</a>
+                    </div>
+                </div>
+
+                <!-- EDARAN -->
+                <div class="relative dropdown">
+                    <button class="py-3 px-4 hover:bg-pramuka-purple font-medium text-sm flex items-center">Edaran <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                    <div class="dropdown-menu absolute hidden bg-white text-gray-800 shadow-lg rounded-b w-56 z-50">
+                        <a href="https://drive.google.com/drive/folders/14F7HMWvH0ORseo0oAIrrrqn_tV5QOWXA?usp=drive_link" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Edaran Kwarran</a>
+                        <a href="https://www.pramukacianjur.or.id/search/label/Edaran?&max-results=5" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Edaran Kwarcab</a>
+                        <a href="https://www.pramukacianjur.or.id/2019/10/edaran-kwarda-jabar-ekspedisi-dan.html" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Edaran Kwarda</a>
+                        <a href="https://pramuka.or.id/kategori/surat-edaran/" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm">Edaran Kwarnas</a>
+                    </div>
+                </div>
+
+                <!-- BULETIN -->
+                <a href="#" class="py-3 px-4 hover:bg-pramuka-purple font-medium text-sm transition">Buletin</a>
+
+                <!-- MATERI -->
+                <div class="relative dropdown">
+                    <button class="py-3 px-4 hover:bg-pramuka-purple font-medium text-sm flex items-center">Materi <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                    <div class="dropdown-menu absolute hidden bg-white text-gray-800 shadow-lg rounded-b w-48 z-50">
+                        <a href="https://www.pramukacianjur.or.id/p/blog-page_25.html" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Pelatih</a>
+                        <a href="https://www.pramukacianjur.or.id/p/materi-pembina-pramuka.html" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Pembina</a>
+                        <a href="https://drive.google.com/file/d/1ZC7B8LdB-8_bZH1bRVpx4xjWCxsFPht-/view?usp=sharing" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Siaga</a>
+                        <a href="https://drive.google.com/file/d/1t4UcOcsWlSz66Um-_Xuk5BdAt038cKfk/view?usp=drive_link" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Penggalang</a>
+                        <a href="https://drive.google.com/file/d/1bfLfXSskc5JcZQGeTFcQ1ZzYwM4Y2IQb/view?usp=drive_link" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Penegak</a>
+                        <a href="https://pramuka.or.id/files/document/SK-119-2011-Panduan%20Penyelesaian-SKU-Pandega.pdf" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Pandega</a>
+                        <a href="https://drive.google.com/file/d/1n0cSpJknM1ndsAVIRg0BK4V42Bg5vpqD/view?usp=sharing" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm">Umum</a>
+                    </div>
+                </div>
+
+                <!-- BERITA GUDEP -->
+                <a href="https://drive.google.com/drive/folders/1PU-SAcpBrv3ZV6scuA-cw5hR7dOGaa9r?usp=sharing" target="_blank" class="py-3 px-4 hover:bg-pramuka-purple font-medium text-sm transition">Berita Gudep</a>
+
+                <!-- GALERI -->
+                <div class="relative dropdown">
+                    <button class="py-3 px-4 hover:bg-pramuka-purple font-medium text-sm flex items-center">Galeri <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                    <div class="dropdown-menu absolute hidden bg-white text-gray-800 shadow-lg rounded-b w-48 z-50">
+                        <a href="https://drive.google.com/drive/folders/1it25U0R3EB1-TI0HPByirBvsL5bifQsI?usp=sharing" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Galeri Foto</a>
+                        <a href="https://www.youtube.com/@KwarranCikalongkulon/videos" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm">Galeri Video</a>
+                    </div>
+                </div>
+
+                <!-- TAUTAN -->
+                <div class="relative dropdown">
+                    <button class="py-3 px-4 hover:bg-pramuka-purple font-medium text-sm flex items-center">Tautan <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+                    <div class="dropdown-menu absolute hidden bg-white text-gray-800 shadow-lg rounded-b w-52 z-50">
+                        <a href="https://drive.google.com/drive/folders/14F7HMWvH0ORseo0oAIrrrqn_tV5QOWXA?usp=sharing" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Kirim Berita</a>
+                        <a href="https://drive.google.com/drive/folders/18qRKNBUB56f36AhEDETt43WNVusUBNQZ?usp=sharing" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Kirim Artikel</a>
+                        <a href="https://drive.google.com/drive/folders/1it25U0R3EB1-TI0HPByirBvsL5bifQsI?usp=sharing" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Kirim Foto</a>
+                        <a href="https://ayopramuka-kwarnas.id/form-daftar-anggota" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Info KTAP</a>
+                        <a href="https://drive.google.com/drive/folders/1-ExeuBWTtkqxTh4wfLSQ3JsJXWmNDyHj?usp=sharing" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Formulir Kegiatan</a>
+                        <a href="https://drive.google.com/drive/folders/1d3w8aG1WQugnQcsgkd6ttRLm_7eM-QxZ?usp=sharing" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm border-b">Pengumuman</a>
+                        <a href="https://drive.google.com/drive/folders/1PU-SAcpBrv3ZV6scuA-cw5hR7dOGaa9r?usp=sharing" target="_blank" class="block px-4 py-2 hover:bg-pramuka-light text-sm">Info Akreditasi</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SLIDER SECTION -->
+    <section id="home" class="relative h-[450px] md:h-[550px] overflow-hidden bg-black text-white">
+        <div id="slider" class="relative w-full h-full">
+            <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1NgU9Ph0-RzhOPJ-6muMUN6PhLZLL1xxI');"></div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1bh_VxhQeY0udyOWgYTtZAE0j8elz61hp');"></div>
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/d/1xNOsUTeYwsZOOzOS7OZ_QVD_ovqnW1Z6');"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 z-10">
+            <span class="bg-pramuka-purple text-pramuka-gold text-xs md:text-sm uppercase font-bold px-4 py-1 rounded-full mb-3 tracking-wider">Motto & Slogan</span>
+            <h2 class="text-3xl md:text-6xl font-extrabold text-white mb-2 drop-shadow-md">"BERAKSI"</h2>
+            <p class="text-lg md:text-2xl text-pramuka-gold font-semibold max-w-3xl drop-shadow">Berkarakter, Aktif, Kreatif, Solid, dan Inovatif</p>
+            <p class="text-xs md:text-base text-gray-200 mt-2 max-w-xl">Mewujudkan generasi muda Cikalongkulon yang mandiri, berjiwa kepemimpinan, dan mengamalkan Tri Satya & Dasa Darma.</p>
+            <div class="mt-6 flex space-x-3">
+                <a href="#sambutan" class="bg-pramuka-gold text-pramuka-dark font-bold px-6 py-2.5 rounded-lg hover:bg-yellow-400 transition shadow">Jelajahi Profil</a>
+                <a href="https://ayopramuka-kwarnas.id/form-daftar-anggota" target="_blank" class="bg-pramuka-purple text-white font-bold px-6 py-2.5 rounded-lg hover:bg-purple-900 transition shadow">Info KTAP</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAMBUTAN KETUA -->
+    <section id="sambutan" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl md:text-3xl font-bold text-pramuka-dark">SAMBUTAN KETUA KWARRAN</h3>
+                <div class="w-20 h-1 bg-pramuka-gold mx-auto mt-2"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-8 bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <div class="w-full md:w-1/3 flex flex-col items-center">
+                    <img src="https://lh3.googleusercontent.com/d/1IFjWL63npFd9ndUtdrCzrS953ujZtYR9" alt="Kak Nawawi Somdani" class="w-56 h-72 object-cover rounded-xl shadow-md border-4 border-pramuka-gold">
+                    <h4 class="mt-4 font-bold text-lg text-pramuka-dark text-center">Kak Nawawi Somdani, S.Pd., -LST</h4>
+                    <p class="text-xs text-pramuka-purple font-semibold">Ketua Kwarran Cikalongkulon</p>
+                </div>
+                <div class="w-full md:w-2/3 text-gray-700 leading-relaxed text-sm md:text-base space-y-4">
+                    <p class="font-semibold text-pramuka-dark">Assalamu’alaikum Warahmatullahi Wabarakatuh.<br>Salam Pramuka!</p>
+                    <p>Selamat datang di Website Resmi Gerakan Pramuka Kwartir Ranting Cikalongkulon. Website ini menjadi sarana informasi, komunikasi, dokumentasi, dan publikasi berbagai kegiatan kepramukaan di wilayah Cikalongkulon.</p>
+                    <p>Mari bersama-sama kita wujudkan Pramuka Cikalongkulon yang <strong>berkarakter, aktif, kreatif, solid, dan inovatif</strong>, serta senantiasa mengamalkan nilai-nilai Tri Satya dan Dasa Darma dalam kehidupan sehari-hari.</p>
+                    <p>Semoga Gerakan Pramuka terus menjadi wadah pembentukan generasi muda yang mandiri, bertanggung jawab, berjiwa kepemimpinan, dan bermanfaat bagi masyarakat.</p>
+                    <p class="font-bold text-pramuka-dark">Salam Pramuka!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISI DAN MISI -->
+    <section id="visi-misi" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-pramuka-dark">VISI DAN MISI</h3>
+                <div class="w-20 h-1 bg-pramuka-purple mx-auto mt-2"></div>
+            </div>
+
+            <!-- VISI -->
+            <div class="bg-pramuka-dark text-white p-6 md:p-8 rounded-2xl mb-8 text-center shadow-lg">
+                <span class="text-pramuka-gold uppercase tracking-widest text-xs font-bold">Visi Utama</span>
+                <p class="text-base md:text-xl font-medium mt-2 italic">“Menjadikan wadah pembinaan Gerakan Pramuka di tingkat Ranting yang unggul dan berdaya guna dalam membentuk generasi muda yang Berkarakter, Aktif, Kreatif, Solid dan Inovatif serta berperan aktif dalam pembangunan masyarakat.”</p>
+            </div>
+
+            <!-- MISI -->
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start space-x-3">
+                    <span class="bg-pramuka-purple text-white w-8 h-8 flex items-center justify-center rounded-full font-bold text-sm flex-shrink-0">1</span>
+                    <p class="text-sm text-gray-700">Meningkatkan kualitas pembinaan anggota Pramuka melalui kegiatan yang kreatif, inovatif, dan sesuai dengan kebutuhan generasi muda.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start space-x-3">
+                    <span class="bg-pramuka-purple text-white w-8 h-8 flex items-center justify-center rounded-full font-bold text-sm flex-shrink-0">2</span>
+                    <p class="text-sm text-gray-700">Menanamkan nilai-nilai kepramukaan seperti disiplin, tanggung jawab, kepemimpinan, dan cinta tanah air.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start space-x-3">
+                    <span class="bg-pramuka-purple text-white w-8 h-8 flex items-center justify-center rounded-full font-bold text-sm flex-shrink-0">3</span>
+                    <p class="text-sm text-gray-700">Mengembangkan potensi peserta didik agar memiliki keterampilan hidup (life skills) yang bermanfaat bagi diri sendiri, keluarga, dan masyarakat.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start space-x-3">
+                    <span class="bg-pramuka-purple text-white w-8 h-8 flex items-center justify-center rounded-full font-bold text-sm flex-shrink-0">4</span>
+                    <p class="text-sm text-gray-700">Memperkuat sinergi dengan sekolah, pemerintah, dan masyarakat dalam mendukung program pendidikan karakter.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start space-x-3">
+                    <span class="bg-pramuka-purple text-white w-8 h-8 flex items-center justify-center rounded-full font-bold text-sm flex-shrink-0">5</span>
+                    <p class="text-sm text-gray-700">Mendorong partisipasi aktif anggota Pramuka dalam kegiatan sosial, lingkungan, dan kemasyarakatan di wilayah ranting.</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-start space-x-3">
+                    <span class="bg-pramuka-purple text-white w-8 h-8 flex items-center justify-center rounded-full font-bold text-sm flex-shrink-0">6</span>
+                    <p class="text-sm text-gray-700">Mewujudkan organisasi yang profesional dengan tata kelola yang transparan, akuntabel, dan berorientasi pada pelayanan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEJARAH SINGKAT & TIMELINE -->
+    <section id="sejarah" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl md:text-3xl font-bold text-pramuka-dark">SEJARAH SINGKAT KWARRAN</h3>
+                <div class="w-20 h-1 bg-pramuka-gold mx-auto mt-2"></div>
+            </div>
+
+            <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                Kwartir Ranting (Kwarran) Cikalongkulon merupakan organisasi Gerakan Pramuka di tingkat Kecamatan Cikalongkulon, Kabupaten Cianjur, Jawa Barat. Kwarran berperan mengkoordinasikan pembinaan kepramukaan, Gugusdepan, pembina, serta kegiatan Pramuka bagi peserta didik. Kegiatan Pendidikan Kepramukaan di Cikalongkulon telah terlaksana sejak awal tahun 1990-an melalui kegiatan Jambore Ranting tahunan.
+            </p>
+
+            <h4 class="text-center font-bold text-lg text-pramuka-purple mb-6">Daftar Ketua Kwarran Dari Masa Ke Masa</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-pramuka-gold text-sm"><span class="font-bold text-pramuka-dark">1986–1989:</span> Ade Sobarna</div>
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-pramuka-gold text-sm"><span class="font-bold text-pramuka-dark">1989–1992:</span> Dana Setiadi</div>
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-pramuka-gold text-sm"><span class="font-bold text-pramuka-dark">1992–1995:</span> Drs. H. AM Suganda</div>
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-pramuka-gold text-sm"><span class="font-bold text-pramuka-gold">1995–2003:</span> Cucu Wiharna, S.Pd.</div>
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-pramuka-gold text-sm"><span class="font-bold text-pramuka-dark">2003–2006:</span> Drs. Jamaludin</div>
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-pramuka-gold text-sm"><span class="font-bold text-pramuka-dark">2006–2011:</span> Drs. Jamaludin</div>
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-pramuka-gold text-sm"><span class="font-bold text-pramuka-dark">2011–2014:</span> Engkus Kusaeri, S.Pd.</div>
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-pramuka-gold text-sm"><span class="font-bold text-pramuka-dark">2014–2019:</span> Engkus Kusaeri, S.Pd.</div>
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-pramuka-gold text-sm"><span class="font-bold text-pramuka-dark">2019–2022:</span> H. Tantan Kustandi, S.Pd.I, M.Si</div>
+                <div class="bg-gray-50 p-3 rounded-lg border-l-4 border-pramuka-gold text-sm"><span class="font-bold text-pramuka-dark">2022–2025:</span> Yusuf Ibrahim, S.Pd., MM.Pd, -ALT</div>
+                <div class="bg-pramuka-purple text-white p-3 rounded-lg border-l-4 border-pramuka-gold text-sm font-semibold col-span-1 sm:col-span-2 md:col-span-1"><span class="text-pramuka-gold font-bold">2025–2028:</span> Nawawi Somdani, S.Pd., -LST</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMBED MAPS & LOKASI -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-pramuka-dark">LOKASI SANGGAR BAKTI</h3>
+                <p class="text-xs text-gray-500">Kwartir Ranting Gerakan Pramuka Cikalongkulon</p>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200 h-80">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.338904258957!2d107.1825!3d-6.728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69a03f47c320d3%3A0x600109f0612d!2sCikalongkulon%2C%20Cianjur!5e0!3m2!1sid!2sid!4v1680000000000!5m2!1sid!2sid" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-pramuka-dark text-white mt-auto pt-10 pb-6">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-sm">
+            <div>
+                <h4 class="font-bold text-pramuka-gold mb-3 text-base">Kwarran Cikalongkulon</h4>
+                <p class="text-gray-300 text-xs leading-relaxed">Organisasi Gerakan Pramuka pembina generasi muda di wilayah Kecamatan Cikalongkulon, Kabupaten Cianjur, Jawa Barat.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-pramuka-gold mb-3 text-base">Tautan Cepat</h4>
+                <ul class="space-y-1 text-xs text-gray-300">
+                    <li><a href="https://ayopramuka-kwarnas.id/form-daftar-anggota" target="_blank" class="hover:underline">Pendaftaran KTAP</a></li>
+                    <li><a href="https://pramuka.or.id/" target="_blank" class="hover:underline">Kwartir Nasional</a></li>
+                    <li><a href="https://www.pramukacianjur.or.id/" target="_blank" class="hover:underline">Kwarcab Cianjur</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-pramuka-gold mb-3 text-base">Kontak & Media</h4>
+                <p class="text-xs text-gray-300">Email: kwarrancikalongkulon@gmail.com</p>
+                <p class="text-xs text-gray-300 mt-1">Kecamatan Cikalongkulon, Kabupaten Cianjur</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 text-center pt-4 text-xs text-gray-400">
+            &copy; 2026 Gerakan Pramuka Kwartir Ranting Cikalongkulon. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR SLIDER & MOBILE MENU -->
+    <script>
+        // Hero Slider Logic
+        let slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].style.opacity = '0';
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.opacity = '1';
+        }
+        setInterval(nextSlide, 4000);
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const nav = document.querySelector('nav');
+        menuBtn.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
